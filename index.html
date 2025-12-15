@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<title>حاسبة المعدل - الجزائر</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+<header class="navbar">
+<div class="logo">📘 حاسبة المعدل</div>
+<nav>
+<a href="#" onclick="loadStage('primary')">ابتدائية</a>
+<a href="#" onclick="loadStage('middle')">متوسط</a>
+<a href="#" onclick="loadStage('secondary')">ثانوية</a>
+<a href="#" onclick="loadStage('university')">جامعة</a>
+</nav>
+</header>
+
+
+<main>
+<h2 id="stageTitle">اختر الطور</h2>
+
+
+<section class="controls">
+<label><input type="checkbox" checked onchange="toggleSubject('amazigh')"> الأمازيغية</label>
+<label><input type="checkbox" checked onchange="toggleSubject('music')"> الموسيقى</label>
+<label><input type="checkbox" checked onchange="toggleSubject('art')"> الرسم</label>
+</section>
+
+
+<table id="subjectsTable">
+<thead>
+<tr>
+<th>المادة</th>
+<th>نقطة الفرض</th>
+<th>التقويم المستمر</th>
+<th>نقطة الاختبار</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+
+
+<button class="result-btn" onclick="calculateResult()">احسب النتيجة</button>
+</main>
+
+
+<div id="resultModal" class="modal">
+<div class="modal-content">
+<h2 id="resultText"></h2>
+<button onclick="closeModal()">إغلاق</button>
+</div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

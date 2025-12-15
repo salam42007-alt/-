@@ -1,89 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8" />
-<title>حاسبة المعدل - الجزائر</title>
-<link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-
-<header class="navbar">
-<h1>📘 حاسبة المعدل</h1>
-<nav>
-<button onclick="openStage('primary')">ابتدائية</button>
-<button onclick="openStage('middle')">متوسط</button>
-<button onclick="openStage('secondary')">ثانوية</button>
-<button onclick="openStage('university')">جامعة</button>
-</nav>
-</header>
-
-
-<main>
-<section class="controls">
-<h2>المواد الاختيارية</h2>
-<label><input type="checkbox" checked onchange="toggleSubject('amazigh')"> اللغة الأمازيغية</label>
-<label><input type="checkbox" checked onchange="toggleSubject('music')"> الموسيقى</label>
-<label><input type="checkbox" checked onchange="toggleSubject('art')"> الرسم</label>
-</section>
-
-
-<table id="subjectsTable">
-<thead>
-<tr>
-<th>المادة</th>
-<th>نقطة الفرض</th>
-<th>التقويم المستمر</th>
-<th>نقطة الاختبار</th>
-</tr>
-</thead>
-<tbody>
-<tr data-subject="arabic">
-<td>اللغة العربية</td>
-<td><input type="number" min="0" max="20"></td>
-<td><input type="number" min="0" max="20"></td>
-<td><input type="number" min="0" max="20"></td>
-</tr>
-<tr data-subject="math">
-<td>الرياضيات</td>
-<td><input type="number" min="0" max="20"></td>
-<td><input type="number" min="0" max="20"></td>
-<td><input type="number" min="0" max="20"></td>
-</tr>
-<tr data-subject="amazigh">
-<td>اللغة الأمازيغية</td>
-<td><input type="number" min="0" max="20"></td>
-<td><input type="number" min="0" max="20"></td>
-<td><input type="number" min="0" max="20"></td>
-</tr>
-<tr data-subject="music">
-<td>الموسيقى</td>
-<td><input type="number" min="0" max="20"></td>
-<td><input type="number" min="0" max="20"></td>
-<td><input type="number" min="0" max="20"></td>
-</tr>
-<tr data-subject="art">
-<td>الرسم</td>
-<td><input type="number" min="0" max="20"></td>
-<td><input type="number" min="0" max="20"></td>
-<td><input type="number" min="0" max="20"></td>
-</tr>
-</tbody>
-</table>
-
-
-<button class="result-btn" onclick="calculateResult()">احسب النتيجة</button>
-</main>
-
-
-<div id="resultModal" class="modal">
-<div class="modal-content">
-<h2 id="resultText"></h2>
-<button onclick="closeModal()">إغلاق</button>
-</div>
-</div>
-
-
-<script src="script.js"></script>
-</body>
-</html>

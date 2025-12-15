@@ -1,66 +1,48 @@
 body {
-  margin: 0;
-  font-family: Tahoma, sans-serif;
-  background: #f6fbfa;
+  font-family: 'Courier New', monospace;
+  background: url('https://i.imgur.com/0M4U2Gp.png') repeat; /* صورة بلوكات ديرت */
+  background-size: 100px 100px;
+  text-align: center;
+  padding-top: 150px;
+  cursor: url('https://i.imgur.com/Xd9lU3y.png'), auto; /* أيقونة بلوك ديرت */
   color: #1f2d2b;
 }
 
-.navbar {
-  background: #e3f2ef;
+.container h1 {
+  font-size: 36px;
+  color: #ffffff;
+  text-shadow: 2px 2px #2b7a6d;
+}
+
+input[type="text"] {
+  width: 400px;
+  padding: 15px;
+  font-size: 18px;
+  border: 3px solid #7b5e2f;
+  border-radius: 5px;
+  background-color: #c2b280; /* لون يشبه بلوك تربة */
+  color: #1f2d2b;
+  box-shadow: 3px 3px #7b5e2f;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 0 10px #2b7a6d;
+}
+
+button {
   padding: 15px 30px;
-  display: flex;
-  align-items: center;
-}
-
-.navbar .logo {
-  font-weight: bold;
-  margin-right: 20px;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.dropbtn {
+  font-size: 18px;
   background-color: #2b7a6d;
   color: white;
-  padding: 10px 15px;
-  border: none;
-  cursor: pointer;
+  border: 3px solid #1f5c50;
   border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 3px 3px #1f5c50;
+  margin-left: 10px;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 120px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+button:hover {
+  background-color: #1f5c50;
+  box-shadow: 1px 1px #2b7a6d;
 }
-
-.dropdown-content a {
-  color: black;
-  padding: 8px 12px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {background-color: #ddd;}
-.dropdown:hover .dropdown-content {display: block;}
-.dropdown:hover .dropbtn {background-color: #1f5c50;}
-
-main {padding: 20px;}
-.controls {margin-bottom: 15px;}
-.controls label {margin-left: 15px;}
-
-table {width: 100%; border-collapse: collapse; background: #fff;}
-th, td {border: 1px solid #dceeee; padding: 8px; text-align: center;}
-th {background: #e3f2ef;}
-input[type=number] {width: 70px;}
-.result-btn {margin: 25px auto; display: block; padding: 12px 30px; background: #2b7a6d; color: white; border: none; border-radius: 8px; cursor: pointer;}
-
-.modal {display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.4);}
-.modal-content {background: white; width: 300px; margin: 15% auto; padding: 25px; border-radius: 10px; text-align: center;}

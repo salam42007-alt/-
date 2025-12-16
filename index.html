@@ -2,15 +2,32 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>محرك بحث ماينكرافت</title>
+  <title>حساب المعدل</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>🔍 محرك البحث ماينكرافت</h1>
-    <input type="text" id="searchInput" placeholder="اكتب كلمة البحث هنا...">
-    <button onclick="search()">ابحث</button>
-  </div>
-  <script src="script.js"></script>
+
+<header>
+  <h1>🧮 حساب المعدل</h1>
+  <nav>
+    <button onclick="setStage('primary')">ابتدائي</button>
+    <button onclick="setStage('middle')">متوسط</button>
+  </nav>
+</header>
+
+<section class="controls">
+  <label>اختر السنة:</label>
+  <select id="yearSelect" onchange="loadSubjects()"></select>
+</section>
+
+<section id="tableContainer"></section>
+
+<div class="actions">
+  <button onclick="calculate()">احسب المعدل</button>
+</div>
+
+<div id="resultBox"></div>
+
+<script src="script.js"></script>
 </body>
 </html>
